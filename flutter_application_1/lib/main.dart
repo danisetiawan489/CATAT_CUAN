@@ -15,11 +15,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: "catat cuan", home: MyHomePage()
-        //HubungiPage(),
-        //SignupPage(),
-        //LoginPage(),
-        //CreateScreen()
-        );
+    return MaterialApp(
+      title: "catat cuan",
+      home:
+          //MyHomePage()
+          HubungiPage(),
+      //SignupPage(),
+      //LoginPage(),
+      //CreateScreen()
+    );
   }
 }
