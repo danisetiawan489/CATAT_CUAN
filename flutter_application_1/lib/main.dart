@@ -6,6 +6,8 @@ import 'package:flutter_application_1/ui/hubungi.dart';
 import 'package:flutter_application_1/ui/daftar.dart';
 import 'package:flutter_application_1/ui/login.dart';
 
+import 'package:flutter_application_1/ui/splach.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -17,9 +19,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "catat cuan",
-      home:
-          //MyHomePage()
-          HubungiPage(),
+      home: SplashScreen(),
+      debugShowCheckedModeBanner: false,
+      //MyHomePage()
+      // HubungiPage(),
       //SignupPage(),
       //LoginPage(),
       //CreateScreen()

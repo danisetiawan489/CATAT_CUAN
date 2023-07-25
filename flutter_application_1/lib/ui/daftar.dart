@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class SignupPage extends StatelessWidget {
+class DaftarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,6 +12,16 @@ class SignupPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            TextFormField(
+              decoration: InputDecoration(
+                labelText: 'First name',
+              ),
+            ),
+            TextFormField(
+              decoration: InputDecoration(
+                labelText: 'Last name',
+              ),
+            ),
             TextFormField(
               decoration: InputDecoration(
                 labelText: 'Username',

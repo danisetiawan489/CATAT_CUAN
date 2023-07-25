@@ -1,53 +1,65 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CreateScreen extends StatelessWidget{
+class CreateScreen extends StatelessWidget {
   const CreateScreen({Key? key}) : super(key: key);
 
- final int _value=1;
+  final int _value = 1;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Create"),
-        ),
+      ),
       body: SafeArea(
         child: Padding(
-          padding:const EdgeInsets.all(8.0),
-          child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [Text("Nama"),TextField(),SizedBox(height: 20,),Text("Type Transaksi"),
-          ListTile(
-            title: Text("Pemasukan"),
-            leading: Radio(
-              value: 1,
-              groupValue: _value,
-              onChanged: (value) {
-                
-              },
-            ),
-          ),
-           ListTile(
-            title: Text("Pengeluaran"),
-            leading: Radio(
-              value: 2,
-              groupValue: _value,
-              onChanged: (value) {
-                
-              },
-            ),
-          ),
-          SizedBox(height: 20,),
-          Text("Total"),
-          TextField(),
-          SizedBox(height: 20,),
-          ElevatedButton(
-  onPressed: () {},
-  child: Text("Simpan"),
-),],
-          )),),
-
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Nama"),
+                TextField(),
+                SizedBox(
+                  height: 20,
+                ),
+                Text("Tipe Transaksi"),
+                ListTile(
+                  title: Text("Pemasukan"),
+                  leading: Radio(
+                    value: 1,
+                    groupValue: _value,
+                    onChanged: (value) {},
+                  ),
+                ),
+                ListTile(
+                  title: Text("Pengeluaran"),
+                  leading: Radio(
+                    value: 2,
+                    groupValue: _value,
+                    onChanged: (value) {},
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Text("Total"),
+                TextField(),
+                SizedBox(
+                  height: 20,
+                ),
+                Text("Keterangan"),
+                TextField(),
+                SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text("Simpan"),
+                ),
+              ],
+            )),
+      ),
     );
   }
 }

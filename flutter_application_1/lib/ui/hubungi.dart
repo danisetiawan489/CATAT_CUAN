@@ -25,10 +25,7 @@ class _ContactPageState extends State<HubungiPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Image.network(
-  'https://www.pixelldesign.com/wp-content/uploads/logo-perusahaan-PT-Cipta-Guna.jpg',
-                height: 200,
-              ),
+              Image.asset('assets/ccc.jpg', height: 200.0),
               SizedBox(height: 16),
               TextFormField(
                 decoration: InputDecoration(

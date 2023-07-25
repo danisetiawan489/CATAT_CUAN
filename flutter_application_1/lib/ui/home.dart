@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/ui/create_screen.dart';
 import 'package:flutter_application_1/ui/update_screen.dart';
+import 'package:flutter_application_1/ui/splach.dart';
+import 'package:flutter_application_1/ui/hubungi.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -51,11 +53,21 @@ class _MyHomePageState extends State<MyHomePage> {
               );
             },
           ),
+          IconButton(
+            icon: Icon(Icons.person), // Menggunakan ikon contact person
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => HubungiPage()),
+              );
+            },
+          )
         ],
       ),
       body: SafeArea(
         child: Column(
           children: [
+            Image.asset('assets/ccc.jpg', height: 200.0),
+            SizedBox(height: 16),
             SizedBox(height: 30),
             Text("Total Pemasukan : Rp.1000"),
             SizedBox(height: 20),

@@ -23,7 +23,7 @@ class UpdateScreen extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                Text("Type Transaksi"),
+                Text("Tipe Transaksi"),
                 ListTile(
                   title: Text("Pemasukan"),
                   leading: Radio(
@@ -44,6 +44,11 @@ class UpdateScreen extends StatelessWidget {
                   height: 20,
                 ),
                 Text("Total"),
+                TextField(),
+                SizedBox(
+                  height: 20,
+                ),
+                Text("Keterangan"),
                 TextField(),
                 SizedBox(
                   height: 20,

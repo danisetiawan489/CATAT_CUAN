@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/ui/splach.dart';
+import 'package:flutter_application_1/ui/daftar.dart';
+import 'package:flutter_application_1/ui/home.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -11,67 +14,47 @@ class _LoginPageState extends State<LoginPage> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
+  int index = 1; // Tambahkan deklarasi dan nilai untuk variabel index
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login'),
+        title: Text(''),
+        actions: [],
       ),
-
-      body:
-       Padding(
+      body: Padding(
         padding: EdgeInsets.all(16),
         child: Form(
           key: _formKey,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              TextFormField(
-                controller: _emailController,
-                decoration: InputDecoration(labelText: 'Email'),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Masukan Email !!!';
-                  }
-                  return null;
-                },
+              Image.asset('assets/ccc.jpg', height: 200.0),
+              SizedBox(height: 16),
+              
+              SizedBox(
+                height: 20,
               ),
-              TextFormField(
-                controller: _passwordController,
-                decoration: InputDecoration(labelText: 'Password'),
-                obscureText: true,
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Masukan Password !!!';
-                  }
-                  return null;
-                },
-              ),
-               SizedBox(
-              height: 40,
-            ),
               ElevatedButton(
                 onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    // TODO: Handle login logic
+                  if (index == 1) {
+                    // "Detail" item is at index 1
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => MyHomePage()),
+                    );
                   }
                 },
-                
-                child: Text('Masuk'),
-                
-              ),
-               SizedBox(
-              height: 20,
-            ),
-               ElevatedButton(
-                onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    // TODO: Handle login logic
-                  }
-                },
-                child: Text('Daftar'),
-                
-              ),
+                style: ElevatedButton.styleFrom(
+                  primary: Color.fromARGB(255, 23, 137, 243), 
+                ),
+                child: Text(
+                  'Masuk',
+                  style: TextStyle(
+                    color: Color.fromRGBO(248, 252, 255, 1), 
+                  ),
+                ),
+              )
             ],
           ),
         ),
